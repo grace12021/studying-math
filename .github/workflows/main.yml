@@ -10,7 +10,9 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: "*.tex"
-          working_directory: Combinatorics
+          working_directory: |
+            Combinatorics
+            HomologicalAlgebra
           glob_root_file: true
       - name: Commits
         run: |
