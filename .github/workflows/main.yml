@@ -10,6 +10,7 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: "*.tex"
+          working_directory: Combinatorics
           glob_root_file: true
       - name: Commits
         run: |
