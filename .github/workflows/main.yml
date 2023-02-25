@@ -15,3 +15,14 @@ jobs:
         with:
           name: PDF
           path: main.pdf
+      - name: Commits
+        run: |
+          git config --local user.email ""
+          git config --local user.name "Auto Compiling Tex"
+          git add news.json
+          git commit -m "Auto - Compile LaTex file"
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          branch: 'master'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
