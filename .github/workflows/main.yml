@@ -9,8 +9,7 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: "*.tex"
-          working_directory: Combinatorics
+          root_file: "*/*.tex"
           glob_root_file: true
       - name: Commits
         run: |
