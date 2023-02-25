@@ -9,17 +9,12 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: main.tex
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v3
-        with:
-          name: PDF
-          path: main.pdf
+          root_file: "*.tex"
       - name: Commits
         run: |
           git config --local user.email ""
           git config --local user.name "Auto Compiling Tex"
-          git add main.pdf
+          git add "*.pdf"
           git commit -m "Auto - Compile LaTex file"
       - name: Push
         uses: ad-m/github-push-action@master
