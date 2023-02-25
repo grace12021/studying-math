@@ -19,7 +19,7 @@ jobs:
         run: |
           git config --local user.email ""
           git config --local user.name "Auto Compiling Tex"
-          git add PDF/main.pdf
+          git add main.pdf
           git commit -m "Auto - Compile LaTex file"
       - name: Push
         uses: ad-m/github-push-action@master
